@@ -1,0 +1,63 @@
+<nav class="bg-gray-100 p-4">
+    <div class="flex justify-between items-center">
+              <!-- Expansor para tamaños lg -->
+        <div class="lg:hidden">
+                <!-- Botón de expansor -->
+          <button (click)="Menu()" id="expansorBtn" class="flex-none text-black hover:text-gray-400 focus:outline-none">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+        </div>
+        <!-- Logo o título del navbar -->
+        <div class="lg:flex max-lg:grow max-lg:order-1 items-center text-center">
+          
+          <a href="#" class="text-white items-center text-center text-2xl font-semibold border rounded-se-3xl rounded-es-3xl bg-black p-3 hover:bg-gray-800">Name-page</a>
+          
+          <div class="max-lg:hidden relative ml-4">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input type="text" id="search-navbar" class="p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Buscar...">
+          </div>
+
+        </div>
+
+        <div class="lg:grow order-2 text-right">
+          <div id="menuLateral1" class="max-lg:hidden bg-gray-100 text-black mr-5">
+            <a href="#" class="px-4 py-2 hover:text-green-600">Inicio</a>
+            <a href="#" class="px-4 py-2 hover:text-green-600">Acerca</a>
+            <a href="#" class="px-4 py-2 hover:text-green-600">Servicios</a>
+            <a href="#" class="px-4 py-2 hover:text-green-600">Productos</a>
+            <a href="#" class="px-4 py-2 hover:text-green-600">Contacto</a>
+          </div>
+        </div>
+        
+        <div class="flex order-last max-lg:flex-none">
+          <a href="#" class="max-lg:hidden lg:order-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>          
+          </a>
+
+          <a href="#" class="order-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>          
+          </a>          
+        </div>
+      
+    </div>
+
+    <!-- Menú de navegación para tamaños pequeños -->
+    <div id="menuLateral" class="lg:hidden bg-gray-100 text-black mt-4" *ngIf="menuVisible">
+        <a href="#" class="block px-4 py-2 hover:text-green-600">Inicio</a>
+        <a href="#" class="block px-4 py-2 hover:text-green-600">Acerca</a>
+        <a href="#" class="block px-4 py-2 hover:text-green-600">Servicios</a>
+        <a href="#" class="block px-4 py-2 hover:text-green-600">Productos</a>
+        <a href="#" class="block px-4 py-2 hover:text-green-600">Contacto</a>
+    </div>
+</nav>
