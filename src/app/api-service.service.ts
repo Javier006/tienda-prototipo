@@ -9,10 +9,10 @@ export class ApiServiceService {
 
   constructor(private http:HttpClient) { }
 
-  private api = 'https://fakestoreapi.com/'
+  private api = 'https://api.escuelajs.co/api/v1/'
   
   getProductos(): Observable<any> {
-    return this.http.get<any>(this.api+'products?limit=12')
+    return this.http.get<any>(this.api+'products?offset=0&limit=8')
   }
 
 }

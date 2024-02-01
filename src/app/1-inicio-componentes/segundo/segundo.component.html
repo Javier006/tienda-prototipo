@@ -1,8 +1,22 @@
-<h1 class="text-center">Novedades</h1>
-<div class="grid lg:grid-cols-4 lg:gap-4 max-lg:grid-cols-2 max-lg:gap-2">
-    <div class="w-[280px] h-[380px] border mx-3" *ngFor="let p of productos">
-        <img class="w-full h-full p-4 hover:bg-green-500" [src]="p.image">
-        <span class="p-2">precio</span>
+<p class="py-9 font-mono font-bold text-5xl md:text-6xl lg:text-8xl text-center lg:mt-7 underline decoration-orange-500">NOVEDADES</p>
+<div class="justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:ml-[60px] lg:mr-[60px]">
+        <div *ngFor="let p of productos">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full object-cover object-center" src="{{p.category.image}}" alt="Producto">
+                <div class="p-8">
+                    <h2 class="font-semibold text-lg truncate">{{p.title}}</h2>
+                    <p class="text-gray-600">$ {{p.price}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
 
