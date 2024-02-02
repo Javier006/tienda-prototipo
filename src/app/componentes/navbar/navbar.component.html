@@ -1,15 +1,12 @@
-<nav class="bg-gray-100 p-4">
+<nav class="bg-gray-100 block p-4">
     <div class="flex justify-between items-center">
-              <!-- Expansor para tamaños lg -->
         <div class="lg:hidden">
-                <!-- Botón de expansor -->
           <button (click)="Menu()" id="expansorBtn" class="flex-none text-black hover:text-gray-400 focus:outline-none">
               <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
         </div>
-        <!-- Logo o título del navbar -->
         <div class="lg:flex max-lg:grow max-lg:order-1 items-center text-center">
           
           <a href="#" class="text-white items-center text-center text-2xl font-semibold border rounded-se-3xl rounded-es-3xl bg-black p-3 hover:bg-gray-800">Name-page</a>
@@ -52,7 +49,6 @@
       
     </div>
 
-    <!-- Menú de navegación para tamaños pequeños -->
     <div id="menuLateral" class="lg:hidden bg-gray-100 text-black mt-4" *ngIf="menuVisible">
         <a href="#" class="block px-4 py-2 hover:text-green-600">Inicio</a>
         <a href="#" class="block px-4 py-2 hover:text-green-600">Acerca</a>

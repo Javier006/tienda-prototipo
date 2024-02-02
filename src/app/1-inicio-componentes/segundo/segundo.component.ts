@@ -8,7 +8,7 @@ import { ApiServiceService } from 'src/app/api-service.service';
 })
 export class SegundoComponent implements OnInit {
 
-  productos:any
+  productos:any=[]
 
   constructor(private api:ApiServiceService){}
 
