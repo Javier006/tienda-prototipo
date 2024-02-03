@@ -17,16 +17,22 @@ export class SegundoComponent implements OnInit {
   }
 
 
-  ObtenerProductos(){
+  ObtenerProductos() {
     this.api.getProductos().subscribe(
-      (data)=>{
-        this.productos=data;
-        console.log('api cargada')
+      (data: any[]) => {
+        this.productos = data.map((producto: any) => {
+          return {
+            ...producto,
+            images: JSON.parse(producto.images[0])
+          };
+        });
+        console.log('api cargada');
       },
-      (error)=>{
+      (error) => {
         console.error(error);
       }
-    )
+    );
   }
+
 
 }
