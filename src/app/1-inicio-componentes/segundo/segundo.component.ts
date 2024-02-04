@@ -19,14 +19,8 @@ export class SegundoComponent implements OnInit {
 
   ObtenerProductos() {
     this.api.getProductos().subscribe(
-      (data: any[]) => {
-        this.productos = data.map((producto: any) => {
-          return {
-            ...producto,
-            images: JSON.parse(producto.images[0])
-          };
-        });
-        console.log('api cargada');
+      (data) => {
+        this.productos = data
       },
       (error) => {
         console.error(error);
