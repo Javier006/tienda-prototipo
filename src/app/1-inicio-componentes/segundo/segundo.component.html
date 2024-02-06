@@ -1,12 +1,14 @@
-<p class="py-9 font-mono font-bold text-5xl md:text-6xl lg:text-8xl text-center lg:mt-7 underline decoration-orange-500">NOVEDADES</p>
-<div class="grid justify-center grid-cols-4 gap-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 mx-12 mt-28">
+<div class="py-9 my-8 font-mono font-bold text-5xl md:text-6xl lg:text-8xl text-center underline decoration-orange-500">NOVEDADES</div>
+<div class="grid justify-center grid-cols-4 gap-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 mx-12">
     <div *ngFor="let p of productos.slice(0,8)" class="max-sm:col-span-4 bg-white">
         <div class="flex flex-col relative">
-
             <a href="#" class="relative flex justify-center">
-                <div class="group w-full h-72">
-                    <img class="w-full h-full object-cover" [src]="p.images[0]" alt="product image"/>
-                    <p class="text-white bg-slate-600 p-2 text-center absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 duration-500">Ver producto</p>
+                <div class="group w-full h-72 object-contain"
+                     (mouseenter)="p.hovered = true" (mouseleave)="p.hovered = false">
+                    <img class="w-full h-full hover:duration-700" [src]="p.hovered ? p.images[1] : p.images[0]" alt="product image"/>
+                    <div class="p-2 text-center absolute inset-x-0 bottom-0 opacity-0 group-hover:bg-black group-hover:opacity-50 duration-700">
+                        <p class="text-white">Ver producto</p>
+                    </div>
                 </div>
             </a>
             <a href="#">
@@ -17,5 +19,7 @@
             </div>
         </div>
     </div>
+    
+    
 </div>
 
