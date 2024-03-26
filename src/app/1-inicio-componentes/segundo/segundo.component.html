@@ -2,15 +2,17 @@
 <div class="grid justify-center grid-cols-4 gap-10 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 mx-12">
     <div *ngFor="let p of productos.slice(0,8)" class="max-sm:col-span-4 bg-white">
         <div class="flex flex-col relative">
-            <a href="#" class="relative flex justify-center">
+
+            <a class="relative flex justify-center">
                 <div class="group w-full h-72 object-contain"
                      (mouseenter)="p.hovered = true" (mouseleave)="p.hovered = false">
                     <img class="w-full h-full hover:duration-700" [src]="p.hovered ? p.images[1] : p.images[0]" alt="product image"/>
-                    <div class="p-2 text-center absolute inset-x-0 bottom-0 opacity-0 group-hover:bg-black group-hover:opacity-50 duration-700">
+                    <a href="#" class="p-2 text-center absolute inset-x-0 bottom-0 opacity-0 group-hover:bg-black group-hover:opacity-50 duration-700">
                         <p class="text-white">Ver producto</p>
-                    </div>
+                    </a>
                 </div>
             </a>
+
             <a href="#">
                 <h5 class="text-lg font-semibold tracking-tight text-gray-900 truncate mt-5">{{p.title}}</h5>
             </a>
